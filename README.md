@@ -1,5 +1,6 @@
 # SudOKu
-## Video Demo:
+A puzzle in which player enters the number into a grid in specific pattern.
+## Video Demo: https://youtu.be/lTJU5zP4U5g
 ## Description:
 
 + SudOKu is a **flask application**. It is a game that is made with the registration facility.<br/><br/>
