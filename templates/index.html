@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}Levels{% endblock %}
+{% block head %}
+    <style>
+        a{
+            text-decoration: none;
+            color: #0096FF;
+            text-align: center;
+        }
+        .index{
+            font-size: 35px;
+        }
+        .indexpage th{
+            text-align: center;
+        } 
+        .indexpage td{
+            padding-left: 20px;
+            text-align: center;
+            color: #0096FF;
+            font-size:35px;
+        }
+    </style>
+{% endblock%}
+{% block menu %} active{% endblock %}
+{% block main %}
+    <center><br><br>
+        <table class="indexpage">
+            <tr><th><a href="/lvl1" class="index">Level 1</a></th><td>{{ lvl1 }}</td></tr>
+            <tr><th><a href="/lvl2" class="index">Level 2</a></th><td>{{ lvl2 }}</td></tr>
+            <tr><th><a href="/lvl3" class="index">Level 3</a></th><td>{{ lvl3 }}</td></tr>
+        </table>
+    </center>
+    
+    
+{% endblock %}

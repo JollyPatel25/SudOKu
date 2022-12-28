@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}Register{% endblock %}
+{% block head %}
+    <style>
+        h2{
+            color: #0096FF;
+        }
+        a{
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+{% block register %} active{% endblock %}
+{% block main %}
+<br><br><center>
+    {% if notify %}
+         <h2>{{ notify }}</h2>       
+    {% endif %}
+    <table class="register table-stripped table-sm">
+        <form action="/register" method="POST">
+            
+            <tr><td><input autocomplete="off" type="text" name="username" placeholder="Username"></td></tr>
+            <tr><td><input autocomplete="off" type="tel" name="phone" placeholder="Phone No."></td></tr>
+            <tr><td><input autocomplete="off" type="password" name="password" placeholder="Password"></td></tr>
+            <tr><td><input autocomplete="off" type="password" name="confirmpassword" placeholder="Confirm Password"></td></tr>
+            <tr></tr><td><center><input type="submit" value="Register"></center></td></tr>
+        </form>
+    </table>
+    </center>
+{% endblock %}

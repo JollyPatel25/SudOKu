@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}Rules{% endblock %}
+{% block head %}
+    <style>
+        .rules{
+            margin-left: 25px;
+            color: #0096FF;
+            text-transform: capitalize;
+        }
+        li{
+            margin-left: 15px;
+            list-style-type: none;
+        }
+        p{
+            display: inline;
+            color: #0096FF;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        a{
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+{% block class %} active{% endblock %}
+{% block main %}
+    <br>
+    <h3 class="rules">rules for playing the game!</h3>
+    <ul>
+        <li>
+            <p>Rule 1</p> - Each row must contain the allowed numbers, without repetitions.
+        </li>
+        <li>
+            <p>Rule 2</p> - Each column must contain the allowed numbers, without repetitions.
+        </li>
+        <li>
+            <p>Rule 3</p> - The digits can only occur once per block.
+        </li>
+        <li>
+            <p>Rule 4</p> - The sum of every single row, column and block must equal to the sum of each allowed numbers once.
+        </li>
+        <li>
+           Allowed Numbers are <p>1</p>, <p>2</p>, <p>3</p>, <p>4</p>, <p>5</p>, <p>6</p> for Level 1.
+        </li>
+        <li>
+           Allowed Numbers are <p>1</p>, <p>2</p>, <p>3</p>, <p>4</p>, <p>5</p>, <p>6</p>, <p>7</p>, <p>8</p>, <p>9</p> for Level 2.
+        </li>
+    </ul>
+{% endblock%}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}Login{% endblock %}
+{% block head %}
+    <style>
+        table.login{
+            
+            width: 175px;
+        }
+        .space{
+            align-items: center;
+        }
+        h2{
+            color: #0096FF;
+        }
+        a{
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+{% block login %} active{% endblock %}
+{% block main %}<br><br><center>
+    {% if notify %}
+                <h2>{{ notify }}</h2>
+    {% endif %}
+    <table class="login table-stripped table-sm">
+        <form action="/login" method="POST">
+            
+            <tr class="space"><td><input autocomplete="off" type="text" name="username" placeholder="Username"></td></tr>
+            <tr class="space"><td><input autocomplete="off" type="password" name="password" placeholder="Password"></td></tr>
+            <tr class="space center"><td><center><input type="submit" value="Log In"></center></td></tr>
+        </form>
+    </table>
+{% endblock %}

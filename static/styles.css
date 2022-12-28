@@ -1,0 +1,35 @@
+tab{
+  width:100%;
+}
+.first{
+  text-align: left;
+  width:250px;
+  color:#0096FF;
+}
+.second{
+  font-size: 23px;
+  width:200px;
+  color:#0096FF;
+  text-align:right;
+}
+input{
+  border-color: #0096FF;
+}
+.heading{
+  width:800px;
+  text-align: left;
+  font-size: 23px;
+  color:#0096FF;
+}
+.color{
+  color:#0096FF;
+  padding: 0px;
+  border-right: 1px solid #0096FF;
+}
+.noline
+{
+  text-decoration: none;
+}
+.active{
+  color:darkslategray;
+}

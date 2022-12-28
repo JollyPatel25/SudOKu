@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}Level 1{% endblock %}
+{% block head %}
+    <script>
+        
+    </script>
+    <style>
+        input{
+            border-width: 0.5px;
+            border-color: grey;
+        }
+        .lvl1 th{
+            border-width:1px;
+        }
+        h2{
+            color: #0096FF;
+        }
+        input[type=submit]{
+            background-color: #0096FF;
+            color: black;
+            font-size: 20px;
+        }
+        input[type=submit]:hover{
+            background-color: whitesmoke;
+            color:#0096FF;
+        }
+        a{
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+{% block main %}
+    <center>
+        <form action="/lvl1" method="POST">
+            <center><h2>{{ notify }}</h2></center><br>
+            <table border="1" style="border:5px solid #87CEEB;" class="lvl1">
+                {% for i in range(count) %}
+                    {% if i == 2 or i == 4 %}
+                        <th style="background-color: #87CEEB;" colspan="7"></th>
+                    {% endif %}
+                    <tr>
+                        {% for j in range(count) %}
+                            {% if j == count/2  and i == 0 %}
+                                <th style="background-color: #87CEEB;" rowspan="2"></th>
+                            {% endif %}
+                            {% if j == count/2  and i == 2 %}
+                                <th style="background-color: #87CEEB;" rowspan="2"></th>
+                            {% endif %}
+                            {% if j == count/2  and i == 4 %}
+                                <th style="background-color: #87CEEB;" rowspan="2"></th>
+                            {% endif %}
+                            {% if matrix[i][j] != 0 %}
+                                <th><input readonly style="color: #0096FF;text-align:center;" size="1" type="text" value="{{ matrix[i][j] }}" name="i{{ i }}{{ j }}" id="i{{ i }}{{ j }}"></th>
+                            {% else %}
+                                <th><input size="1" autocomplete="off" style="text-align:center;" type="text" value="" name="i{{ i }}{{ j }}" id="i{{ i }}{{ j }}"></th>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table><br>
+            <input type="submit" value="Finalize">
+        </form>
+    </center>
+        
+{% endblock %}
